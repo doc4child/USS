@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Universal Sleep Solutions — Coming Soon</title>
+  <meta name="description" content="Universal Sleep Solutions — Coming soon in Leander, TX. Board-certified pediatric sleep medicine specialist Dr. Minal Patel. Learn more, sign up for updates.">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Simple, neutral system font stack -->
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --accent:#7dd3fc;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-width:1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071025 0%, #071b2b 50%, #071025 100%);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius:20px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent), #60a5fa);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#07203a;
+      box-shadow: 0 6px 18px rgba(8,12,20,0.6), inset 0 -6px 18px rgba(255,255,255,0.04);
+      flex: 0 0 72px;
+    }
+    h1{
+      margin:0;
+      font-size:1.5rem;
+      line-height:1.05;
+    }
+    p.lead{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:22px;
+      margin-top:18px;
+    }
+
+    @media (max-width:880px){
+      .grid{grid-template-columns: 1fr; }
+    }
+
+    /* Left column: info */
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .coming{
+      display:inline-block;
+      padding:6px 10px;
+      background:var(--glass);
+      color:var(--accent);
+      border-radius:999px;
+      font-weight:600;
+      font-size:0.85rem;
+      margin-bottom:12px;
+    }
+
+    .bio{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+    }
+    .photo-placeholder{
+      width:120px;
+      height:120px;
+      border-radius:10px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-size:0.9rem;
+      border:1px solid rgba(255,255,255,0.03);
+      flex-shrink:0;
+    }
+    .bio-content h2{margin:0 0 6px 0}
+    .bio-content p{margin:0 0 10px 0; color:var(--muted); line-height:1.45}
+    .bio-list{margin:0;padding:0; list-style:none; color:var(--muted); font-size:0.95rem}
+    .bio-list li{margin:6px 0}
+
+    /* Right column: contact & signup */
+    .contact{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+      padding:18px;
+      border-radius:12px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:stretch;
+    }
+
+    .contact h3{margin:0;font-size:1rem}
+    .contact .meta{color:var(--muted); font-size:0.95rem}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:var(--accent);
+      color:#05202b;
+      font-weight:700;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      border:none;
+      cursor:pointer;
+    }
+
+    .small{
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    .form-row{display:flex; gap:8px}
+    @media (max-width:420px){ .form-row{flex-direction:column} }
+
+    input[type="email"]{
+      flex:1;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.02);
+      color:inherit;
+      outline:none;
+    }
+    .note{font-size:0.82rem; color:var(--muted)}
+
+    footer{
+      margin-top:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    /* subtle footer links */
+    a.link{color:var(--accent); text-decoration:none}
+    a.link:hover{text-decoration:underline}
+  </style>
+
+  <!-- Structured data for Organization and Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Universal Sleep Solutions, PLLC",
+        "url": "https://www.UniversalSleepSolutions.com",
+        "telephone": "(512) 931-1575",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "15161 Ronald Regan Blvd, Unit 409",
+          "addressLocality": "Leander",
+          "addressRegion": "TX",
+          "postalCode": "78641",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Minal Patel, M.D.",
+        "jobTitle": "Board-certified Sleep Medicine Specialist and Pediatrician",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Universal Sleep Solutions, PLLC"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="site-title">
+    <header>
+      <div class="logo" aria-hidden="true">USS</div>
+      <div>
+        <h1 id="site-title">Universal Sleep Solutions — Coming Soon</h1>
+        <p class="lead">Comprehensive sleep medicine and diagnostic sleep lab for infants, children, and adults in northern Greater Austin.</p>
+      </div>
+    </header>
+
+    <div class="grid" role="region" aria-label="Main content">
+      <!-- Left / Main column -->
+      <section class="card" aria-labelledby="about-title">
+        <span class="coming" aria-hidden="true">Coming Soon</span>
+        <h2 id="about-title" style="margin-top:10px">Personalized sleep care — local & accessible</h2>
+
+        <div style="margin-top:14px" class="bio" aria-label="About Dr. Patel">
+          <div class="photo-placeholder" role="img" aria-label="Dr. Minal Patel photo placeholder">
+            Photo
+          </div>
+
+          <div class="bio-content">
+            <h2>Dr. Minal Patel, M.D.</h2>
+            <p>Minal Patel, M.D., is a board-certified sleep medicine specialist and pediatrician who provides comprehensive sleep evaluations and care for patients of all ages.</p>
+
+            <ul class="bio-list">
+              <li><strong>Training:</strong> Pediatric residency and sleep medicine fellowship — University of Mississippi Medical Center, Jackson.</li>
+              <li><strong>Academic leadership:</strong> Former Program Director, Sleep Medicine Fellowship & Assistant Professor of Sleep Medicine, University of Mississippi Medical Center.</li>
+              <li><strong>Local practice:</strong> Founder — Universal Sleep Solutions; also affiliated with Teddy Bear Pediatrics and Sleep Medicine.</li>
+              <li><strong>Certifications & services:</strong> Board-certified in sleep medicine, Inspire-certified, and operating a sleep lab for diagnostic studies across all ages.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr style="margin:20px 0; border: none; height:1px; background: rgba(255,255,255,0.03)">
+
+        <p class="small">Universal Sleep Solutions will offer diagnostic sleep studies, PAP evaluation and titration, pediatric sleep consultations, and adult sleep medicine services. Our team emphasizes evidence-based care, family-centered communication, and close coordination with referring providers.</p>
+      </section>
+
+      <!-- Right column: contact & signup -->
+      <aside class="contact" aria-labelledby="contact-title">
+        <div>
+          <h3 id="contact-title">Contact & Location</h3>
+          <p class="meta"><strong>Universal Sleep Solutions, PLLC</strong><br>
+            15161 Ronald Regan Blvd, Unit 409<br>
+            Leander, TX 78641
+          </p>
+          <p class="meta"><strong>Phone:</strong> <a class="link" href="tel:+15129311575">(512) 931-1575</a></p>
+          <p class="meta"><strong>Website:</strong> <a class="link" href="https://www.UniversalSleepSolutions.com" target="_blank" rel="noopener">UniversalSleepSolutions.com</a></p>
+        </div>
+
+        <div>
+          <h3 style="margin-bottom:8px">Get notified</h3>
+          <p class="note">Sign up to receive updates about our opening, services, and scheduling availability.</p>
+
+          <!-- NOTE: Replace the form action with your mailing list endpoint (Mailchimp, ConvertKit, etc.) -->
+          <form action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you — we will notify you when we open. Replace this handler with your real signup endpoint.');">
+            <div class="form-row">
+              <label for="email" class="sr-only" style="display:none">Email address</label>
+              <input id="email" name="email" type="email" placeholder="Your email address" required aria-required="true" />
+              <button class="btn" type="submit" aria-label="Sign up for updates">Notify Me</button>
+            </div>
+            <p class="note" style="margin-top:8px">We respect your privacy and will not share your information.</p>
+          </form>
+        </div>
+
+        <div>
+          <h3 style="margin-bottom:8px">Referrals & DME</h3>
+          <p class="small">We welcome referrals and coordination with local providers. For DME orders or questions, please call <a class="link" href="tel:+15129311575">(512) 931-1575</a>.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Universal Sleep Solutions, PLLC</div>
+      <div class="small">Designed for accessibility • Built for families</div>
+    </footer>
+  </main>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // small helper to add .sr-only class if needed (for accessibility)
+    var style = document.createElement('style');
+    style.innerHTML = '.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}';
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
