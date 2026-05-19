@@ -186,6 +186,34 @@
     /* subtle footer links */
     a.link{color:var(--accent); text-decoration:none}
     a.link:hover{text-decoration:underline}
+
+    /* QR / Save Contact section */
+    .qr-section{text-align:center}
+    .qr-section a.qr-wrap{
+      display:inline-block;
+      border-radius:12px;
+      background:#fff;
+      padding:8px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.5);
+      transition:transform .15s, box-shadow .15s;
+    }
+    .qr-section a.qr-wrap:hover{transform:scale(1.03);box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+    .qr-section img{display:block;width:160px;height:160px;border-radius:6px}
+    .qr-caption{font-size:0.8rem;color:var(--muted);margin:8px 0 10px}
+    .btn-dl{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:transparent;
+      color:var(--accent);
+      font-weight:600;
+      font-size:0.9rem;
+      padding:9px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      border:1px solid rgba(125,211,252,0.4);
+      transition:background .15s,border-color .15s;
+      width:100%;
+    }
+    .btn-dl:hover{background:rgba(125,211,252,0.08);border-color:var(--accent)}
   </style>
 
   <!-- Structured data for Organization and Person -->
@@ -284,6 +312,22 @@
           <p class="note">Sign up to receive updates about our opening, services, and scheduling availability.</p>
 
           <h3 id="contact-title"> email:info@teddybearpediatrics.com </h3>
+        </div>
+
+        <!-- QR Code / Save Contact -->
+        <div class="qr-section">
+          <h3 style="margin-bottom:10px">Save Our Contact</h3>
+          <a class="qr-wrap" href="/uss.vcf" download="UniversalSleepSolutions.vcf"
+             title="Click to download contact card">
+            <img src="/public/uss-vcf.svg"
+                 alt="QR code — scan to open UniversalSleepSolutions.com"
+                 width="160" height="160">
+          </a>
+          <p class="qr-caption">📱 Scan with your camera to visit our site<br>
+            Tap / click the image to save to contacts</p>
+          <a class="btn-dl" href="/uss.vcf" download="UniversalSleepSolutions.vcf">
+            ⬇&nbsp; Download Contact Card (.vcf)
+          </a>
         </div>
 
         <div>
